@@ -1,0 +1,15 @@
+# IDE folders
+.idea/
+.vscode/
+
+# Build directories
+target/
+bin/
+out/
+
+# Logs and reports
+*.log
+*.html
+*.json
+*.xml
+reports/

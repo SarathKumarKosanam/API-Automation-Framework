@@ -3,16 +3,9 @@
 <suite name="Failed suite [API Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="API Tests(failed)">
     <classes>
-      <class name="tests.DeleteRequestTest">
-        <methods>
-          <include name="setupReport"/>
-          <include name="deletePost"/>
-          <include name="tearDownReport"/>
-        </methods>
-      </class> <!-- tests.DeleteRequestTest -->
       <class name="tests.PatchRequestTest">
         <methods>
-          <include name="updatePostPartially"/>
+          <include name="verifyPartialUpdatePost"/>
           <include name="setupReport"/>
           <include name="tearDownReport"/>
         </methods>
@@ -20,10 +13,17 @@
       <class name="tests.PutRequestTest">
         <methods>
           <include name="setupReport"/>
-          <include name="updatePostFully"/>
+          <include name="verifyUpdatePost"/>
           <include name="tearDownReport"/>
         </methods>
       </class> <!-- tests.PutRequestTest -->
+      <class name="tests.PostRequestTest">
+        <methods>
+          <include name="setupReport"/>
+          <include name="verifyCreatePost"/>
+          <include name="tearDownReport"/>
+        </methods>
+      </class> <!-- tests.PostRequestTest -->
     </classes>
   </test> <!-- API Tests(failed) -->
 </suite> <!-- Failed suite [API Test Suite] -->

@@ -12,8 +12,8 @@ public class GetRequestTest extends BaseTest {
     public void verifyGetPosts() {
         test = extent.createTest("GET Posts Test");
 
-        String url = "http://localhost:3000/posts";
-        Response response = ApiUtils.sendGet(url);
+        String endpoint = "/posts";  // relative endpoint only
+        Response response = ApiUtils.sendGet(endpoint);
 
         try {
             Assert.assertEquals(response.getStatusCode(), 200);

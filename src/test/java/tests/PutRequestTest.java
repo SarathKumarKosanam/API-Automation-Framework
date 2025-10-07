@@ -1,26 +1,33 @@
 package tests;
 
 import base.BaseTest;
+import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import io.restassured.response.Response;
 import utils.ApiUtils;
 
 public class PutRequestTest extends BaseTest {
 
     @Test
-    public void updatePostFully() {
-        test = extent.createTest("PUT Post Test");
+    public void verifyUpdatePost() {
+        test = extent.createTest("PUT Update Post Test");
 
-        String url = "http://localhost:3000/posts/1"; // Update post with ID 1
-        String jsonBody = "{ \"title\": \"Updated Title\", \"author\": \"Updated Author\" }";
+        String endpoint = "/posts/1";
 
-        Response response = ApiUtils.sendPut(url, jsonBody);
+        String requestBody = """
+                {
+                    "id": 1,
+                    "title": "Updated Title",
+                    "body": "This post was updated using PUT request",
+                    "userId": 1
+                }
+                """;
+
+        Response response = ApiUtils.sendPut(endpoint, requestBody);
 
         try {
             Assert.assertEquals(response.getStatusCode(), 200);
             Assert.assertTrue(response.getBody().asString().contains("Updated Title"));
-            Assert.assertTrue(response.getBody().asString().contains("Updated Author"));
             test.pass("PUT request successful ✅");
         } catch (AssertionError e) {
             test.fail("PUT request failed ❌: " + e.getMessage());

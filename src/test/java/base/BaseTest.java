@@ -15,6 +15,8 @@ public class BaseTest {
         ExtentSparkReporter spark = new ExtentSparkReporter("target/APITestReport.html");
         extent = new ExtentReports();
         extent.attachReporter(spark);
+        extent.setSystemInfo("Tester", "Sarath");
+        extent.setSystemInfo("Environment", "JSONPlaceholder Public API");
     }
 
     @AfterSuite

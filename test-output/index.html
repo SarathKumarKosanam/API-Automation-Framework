@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-API_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">API Test Suite</span>
+              <span class="suite-name border-passed">API Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,31 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-API_Test_Suite" class="hide-methods failed suite-API_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-API_Test_Suite -->
-                      <a href="#" panel-name="suite-API_Test_Suite" class="show-methods failed suite-API_Test_Suite"> (show)</a> <!-- show-methods failed suite-API_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-API_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.DeleteRequestTest" class="method navigator-link" hash-for-method="deletePost">deletePost</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.PutRequestTest" class="method navigator-link" hash-for-method="updatePostFully">updatePostFully</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.PatchRequestTest" class="method navigator-link" hash-for-method="updatePostPartially">updatePostPartially</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-API_Test_Suite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,12 +103,27 @@
                     <div class="method-list-content passed suite-API_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.PostRequestTest" class="method navigator-link" hash-for-method="createNewPost">createNewPost</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.PostRequestTest" class="method navigator-link" hash-for-method="verifyCreatePost">verifyCreatePost</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.DeleteRequestTest" class="method navigator-link" hash-for-method="verifyDeletePost">verifyDeletePost</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-API_Test_Suite" title="tests.GetRequestTest" class="method navigator-link" hash-for-method="verifyGetPosts">verifyGetPosts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.PatchRequestTest" class="method navigator-link" hash-for-method="verifyPartialUpdatePost">verifyPartialUpdatePost</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Test_Suite" title="tests.PutRequestTest" class="method navigator-link" hash-for-method="verifyUpdatePost">verifyUpdatePost</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-API_Test_Suite -->
@@ -147,66 +138,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-API_Test_Suite" class="panel API_Test_Suite">
-          <div class="suite-API_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.DeleteRequestTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="deletePost">
-                  </a> <!-- deletePost -->
-                  <span class="method-name">deletePost</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [404]
-	at tests.DeleteRequestTest.deletePost(DeleteRequestTest.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API_Test_Suite-class-failed -->
-          <div class="suite-API_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.PatchRequestTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="updatePostPartially">
-                  </a> <!-- updatePostPartially -->
-                  <span class="method-name">updatePostPartially</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [404]
-	at tests.PatchRequestTest.updatePostPartially(PatchRequestTest.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API_Test_Suite-class-failed -->
-          <div class="suite-API_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.PutRequestTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="updatePostFully">
-                  </a> <!-- updatePostFully -->
-                  <span class="method-name">updatePostFully</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [200] but found [404]
-	at tests.PutRequestTest.updatePostFully(PutRequestTest.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API_Test_Suite-class-failed -->
           <div class="suite-API_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -225,14 +156,59 @@
           <div class="suite-API_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tests.DeleteRequestTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeletePost">
+                  </a> <!-- verifyDeletePost -->
+                  <span class="method-name">verifyDeletePost</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Test_Suite-class-passed -->
+          <div class="suite-API_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.PatchRequestTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPartialUpdatePost">
+                  </a> <!-- verifyPartialUpdatePost -->
+                  <span class="method-name">verifyPartialUpdatePost</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Test_Suite-class-passed -->
+          <div class="suite-API_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.PutRequestTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUpdatePost">
+                  </a> <!-- verifyUpdatePost -->
+                  <span class="method-name">verifyUpdatePost</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Test_Suite-class-passed -->
+          <div class="suite-API_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tests.PostRequestTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewPost">
-                  </a> <!-- createNewPost -->
-                  <span class="method-name">createNewPost</span>
+                  <a name="verifyCreatePost">
+                  </a> <!-- verifyCreatePost -->
+                  <span class="method-name">verifyCreatePost</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -297,28 +273,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyGetPosts')
 data.setCell(0, 2, 'tests.GetRequestTest')
-data.setCell(0, 3, 2071);
+data.setCell(0, 3, 2377);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createNewPost')
+data.setCell(1, 1, 'verifyCreatePost')
 data.setCell(1, 2, 'tests.PostRequestTest')
-data.setCell(1, 3, 59);
+data.setCell(1, 3, 755);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'updatePostFully')
+data.setCell(2, 1, 'verifyUpdatePost')
 data.setCell(2, 2, 'tests.PutRequestTest')
-data.setCell(2, 3, 37);
+data.setCell(2, 3, 727);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'updatePostPartially')
+data.setCell(3, 1, 'verifyPartialUpdatePost')
 data.setCell(3, 2, 'tests.PatchRequestTest')
-data.setCell(3, 3, 23);
+data.setCell(3, 3, 305);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'deletePost')
+data.setCell(4, 1, 'verifyDeletePost')
 data.setCell(4, 2, 'tests.DeleteRequestTest')
-data.setCell(4, 3, 18);
+data.setCell(4, 3, 300);
 window.suiteTableData['API_Test_Suite']= { tableData: data, tableDiv: 'times-div-API_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-API_Test_Suite">
               </div> <!-- times-div-API_Test_Suite -->
             </div> <!-- times-div -->
@@ -387,48 +363,42 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">verifyGetPosts</span>
-                <span class="method-start">322 ms</span>
+                <span class="method-start">354 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.PostRequestTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createNewPost</span>
-                <span class="method-start">2401 ms</span>
+                <span class="method-name">verifyCreatePost</span>
+                <span class="method-start">2737 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.PutRequestTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">updatePostFully</span>
-                <span class="method-start">2464 ms</span>
+                <span class="method-name">verifyUpdatePost</span>
+                <span class="method-start">3495 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.PatchRequestTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">updatePostPartially</span>
-                <span class="method-start">2507 ms</span>
+                <span class="method-name">verifyPartialUpdatePost</span>
+                <span class="method-start">4226 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.DeleteRequestTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">deletePost</span>
-                <span class="method-start">2535 ms</span>
+                <span class="method-name">verifyDeletePost</span>
+                <span class="method-start">4536 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.GetRequestTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDownReport</span>
-                <span class="method-start">2624 ms</span>
+                <span class="method-start">4876 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

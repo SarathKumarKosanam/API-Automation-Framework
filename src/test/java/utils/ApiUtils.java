@@ -6,37 +6,39 @@ import io.restassured.response.Response;
 
 public class ApiUtils {
 
-    // GET request
-    public static Response sendGet(String url) {
-        return RestAssured.get(url);
+    private static final String BASE_URL = ConfigReader.getProperty("baseUrl");
+
+    // Helper to combine base URL + endpoint
+    private static String buildUrl(String endpoint) {
+        return BASE_URL + endpoint;
     }
 
-    // POST request
-    public static Response sendPost(String url, String body) {
+    public static Response sendGet(String endpoint) {
+        return RestAssured.get(buildUrl(endpoint));
+    }
+
+    public static Response sendPost(String endpoint, String body) {
         return RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(body)
-                .post(url);
+                .post(buildUrl(endpoint));
     }
 
-    // PUT request
-    public static Response sendPut(String url, String body) {
+    public static Response sendPut(String endpoint, String body) {
         return RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(body)
-                .put(url);
+                .put(buildUrl(endpoint));
     }
 
-    // PATCH request
-    public static Response sendPatch(String url, String body) {
+    public static Response sendPatch(String endpoint, String body) {
         return RestAssured.given()
                 .contentType(ContentType.JSON)
                 .body(body)
-                .patch(url);
+                .patch(buildUrl(endpoint));
     }
 
-    // DELETE request
-    public static Response sendDelete(String url) {
-        return RestAssured.delete(url);
+    public static Response sendDelete(String endpoint) {
+        return RestAssured.delete(buildUrl(endpoint));
     }
 }

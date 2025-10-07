@@ -1,19 +1,20 @@
 package tests;
 
 import base.BaseTest;
+import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import io.restassured.response.Response;
 import utils.ApiUtils;
 
 public class DeleteRequestTest extends BaseTest {
 
     @Test
-    public void deletePost() {
+    public void verifyDeletePost() {
         test = extent.createTest("DELETE Post Test");
 
-        String url = "http://localhost:3000/posts/1"; // Delete post with ID 1
-        Response response = ApiUtils.sendDelete(url);
+        String endpoint = "/posts/1";
+
+        Response response = ApiUtils.sendDelete(endpoint);
 
         try {
             Assert.assertEquals(response.getStatusCode(), 200);

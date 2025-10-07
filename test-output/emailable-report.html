@@ -9,23 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">API Test Suite</th></tr>
-<tr><td><a href="#t0">API Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">2,271</td><td></td><td></td></tr>
+<tr><td><a href="#t0">API Tests</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,518</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">API Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">API Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.DeleteRequestTest</td><td><a href="#m0">deletePost</a></td><td rowspan="1">1759829811356</td><td rowspan="1">18</td></tr><tr class="failedodd"><td rowspan="1">tests.PatchRequestTest</td><td><a href="#m1">updatePostPartially</a></td><td rowspan="1">1759829811328</td><td rowspan="1">23</td></tr><tr class="failedeven"><td rowspan="1">tests.PutRequestTest</td><td><a href="#m2">updatePostFully</a></td><td rowspan="1">1759829811285</td><td rowspan="1">37</td></tr><tr><th colspan="4">API Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.GetRequestTest</td><td><a href="#m3">verifyGetPosts</a></td><td rowspan="1">1759829809143</td><td rowspan="1">2071</td></tr><tr class="passedodd"><td rowspan="1">tests.PostRequestTest</td><td><a href="#m4">createNewPost</a></td><td rowspan="1">1759829811222</td><td rowspan="1">59</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">API Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">API Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.DeleteRequestTest</td><td><a href="#m0">verifyDeletePost</a></td><td rowspan="1">1759857892199</td><td rowspan="1">300</td></tr><tr class="passedodd"><td rowspan="1">tests.GetRequestTest</td><td><a href="#m1">verifyGetPosts</a></td><td rowspan="1">1759857888017</td><td rowspan="1">2377</td></tr><tr class="passedeven"><td rowspan="1">tests.PatchRequestTest</td><td><a href="#m2">verifyPartialUpdatePost</a></td><td rowspan="1">1759857891889</td><td rowspan="1">305</td></tr><tr class="passedodd"><td rowspan="1">tests.PostRequestTest</td><td><a href="#m3">verifyCreatePost</a></td><td rowspan="1">1759857890400</td><td rowspan="1">755</td></tr><tr class="passedeven"><td rowspan="1">tests.PutRequestTest</td><td><a href="#m4">verifyUpdatePost</a></td><td rowspan="1">1759857891158</td><td rowspan="1">727</td></tr></tbody>
 </table>
-<h2>API Tests</h2><h3 id="m0">tests.DeleteRequestTest#deletePost</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [200] but found [404]
-	at tests.DeleteRequestTest.deletePost(DeleteRequestTest.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.PatchRequestTest#updatePostPartially</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [200] but found [404]
-	at tests.PatchRequestTest.updatePostPartially(PatchRequestTest.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.PutRequestTest#updatePostFully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [200] but found [404]
-	at tests.PutRequestTest.updatePostFully(PutRequestTest.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.GetRequestTest#verifyGetPosts</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.PostRequestTest#createNewPost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>API Tests</h2><h3 id="m0">tests.DeleteRequestTest#verifyDeletePost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.GetRequestTest#verifyGetPosts</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.PatchRequestTest#verifyPartialUpdatePost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.PostRequestTest#verifyCreatePost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.PutRequestTest#verifyUpdatePost</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

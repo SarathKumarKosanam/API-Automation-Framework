@@ -1,25 +1,30 @@
 package tests;
 
 import base.BaseTest;
+import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import io.restassured.response.Response;
 import utils.ApiUtils;
 
 public class PatchRequestTest extends BaseTest {
 
     @Test
-    public void updatePostPartially() {
-        test = extent.createTest("PATCH Post Test");
+    public void verifyPartialUpdatePost() {
+        test = extent.createTest("PATCH Update Post Title Test");
 
-        String url = "http://localhost:3000/posts/1"; // Update post with ID 1
-        String jsonBody = "{ \"title\": \"Partially Updated Title\" }";
+        String endpoint = "/posts/1";
 
-        Response response = ApiUtils.sendPatch(url, jsonBody);
+        String requestBody = """
+                {
+                    "title": "Patched Title"
+                }
+                """;
+
+        Response response = ApiUtils.sendPatch(endpoint, requestBody);
 
         try {
             Assert.assertEquals(response.getStatusCode(), 200);
-            Assert.assertTrue(response.getBody().asString().contains("Partially Updated Title"));
+            Assert.assertTrue(response.getBody().asString().contains("Patched Title"));
             test.pass("PATCH request successful ✅");
         } catch (AssertionError e) {
             test.fail("PATCH request failed ❌: " + e.getMessage());
